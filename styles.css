@@ -200,11 +200,11 @@ a.text-dark:hover {
 .bottom-bd img {
     margin: 10px;
     width: 100%;
-    max-width: 200px;
+    max-width: 100px;
 }
 
 .bottom-bd:last-child img {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 li.nav-item.dropdown {
@@ -220,7 +220,7 @@ li.nav-item.dropdown {
 
 .bd-title {
     font-size: 20px;
-    padding: 0 10%;
+    padding: 15px 10%;
 }
 
 .bottom-bd-item .bd-title {
