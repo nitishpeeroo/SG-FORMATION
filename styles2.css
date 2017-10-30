@@ -203,7 +203,7 @@ a.text-dark:hover {
 .bottom-bd img {
     margin: 10px;
     width: 100%;
-    max-width: 100px;
+    max-width: 64px;
 }
 
 li.nav-item.dropdown {
@@ -224,7 +224,7 @@ li.nav-item.dropdown {
 }
 
 .bd-title {
-    font-size: 20px;
+    font-size: 1rem;
     padding: 0px 10%;
 }
 
@@ -238,11 +238,8 @@ li.nav-item.dropdown {
 
 
 @media (max-width: 1280px) {
-    .bottom-bd img {
-        max-width: 80px;
-    }
     .bd-title {
-        font-size: 16px;
+        font-size: 1rem;
         padding: 0;
     }
 }
