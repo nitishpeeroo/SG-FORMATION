@@ -203,7 +203,7 @@ a.text-dark:hover {
 .bottom-bd img {
     margin: 10px;
     width: 100%;
-    max-width: 64px;
+    max-width: 120px;
 }
 
 li.nav-item.dropdown {
@@ -234,6 +234,24 @@ li.nav-item.dropdown {
 .bottom-bd-item:hover .bd-title {
     transition: 300ms;
     transform: scale(1.1);
+}
+
+.bottom-bd-item-container {
+    position: relative;
+    max-width: 140px;
+    display: block;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.bottom-bd-item-container:hover .bottom-bd-hover {
+    display: block;
+}
+
+.bottom-bd-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
 }
 
 
