@@ -1181,18 +1181,18 @@
 		scrollAccelerate:	true,		// accelerate scrolling or use a fixed step
 		showTimeout:		250,		// timeout before showing the sub menus
 		hideTimeout:		500,		// timeout before hiding the sub menus
-		showDuration:		0,		// duration for show animation - set to 0 for no animation - matters only if showFunction:null
-		showFunction:		null,		// custom function to use when showing a sub menu (the default is the jQuery 'show')
+		showDuration:		300,		// duration for show animation - set to 0 for no animation - matters only if showFunction:null
+		showFunction:		function($ul, complete) { $ul.slideDown(200, complete); },		// custom function to use when showing a sub menu (the default is the jQuery 'show')
 							// don't forget to call complete() at the end of whatever you do
 							// e.g.: function($ul, complete) { $ul.fadeIn(250, complete); }
-		hideDuration:		0,		// duration for hide animation - set to 0 for no animation - matters only if hideFunction:null
+		hideDuration:		300,		// duration for hide animation - set to 0 for no animation - matters only if hideFunction:null
 		hideFunction:		function($ul, complete) { $ul.fadeOut(200, complete); },	// custom function to use when hiding a sub menu (the default is the jQuery 'hide')
 							// don't forget to call complete() at the end of whatever you do
 							// e.g.: function($ul, complete) { $ul.fadeOut(250, complete); }
-		collapsibleShowDuration:0,		// duration for show animation for collapsible sub menus - matters only if collapsibleShowFunction:null
+		collapsibleShowDuration:300,		// duration for show animation for collapsible sub menus - matters only if collapsibleShowFunction:null
 		collapsibleShowFunction:function($ul, complete) { $ul.slideDown(200, complete); },	// custom function to use when showing a collapsible sub menu
 							// (i.e. when mobile styles are used to make the sub menus collapsible)
-		collapsibleHideDuration:0,		// duration for hide animation for collapsible sub menus - matters only if collapsibleHideFunction:null
+		collapsibleHideDuration:300,		// duration for hide animation for collapsible sub menus - matters only if collapsibleHideFunction:null
 		collapsibleHideFunction:function($ul, complete) { $ul.slideUp(200, complete); },	// custom function to use when hiding a collapsible sub menu
 							// (i.e. when mobile styles are used to make the sub menus collapsible)
 		showOnClick:		false,		// show the first-level sub menus onclick instead of onmouseover (i.e. mimic desktop app menus) (matters only for mouse input)

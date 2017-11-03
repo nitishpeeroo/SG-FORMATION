@@ -274,6 +274,14 @@ li.nav-item.dropdown {
     width: 100%;
 }
 
+#left-menu .sub-arrow {
+    display: none;
+}
+
+.bottom-bd.first .navbar-toggler {
+    margin: 0 auto;
+}
+
 @media (max-width: 1280px) {
     .bd-title {
         font-size: 1rem;
@@ -289,6 +297,15 @@ li.nav-item.dropdown {
     li.nav-item.dropdown {
         padding-bottom: 15px;
         padding-top: 15px;
+    }
+
+    #left-menu a.nav-link {
+        text-align: center;
+        padding: 0 15px 10px 15px;
+    }
+
+    #left-menu .dropdown-menu {
+        text-align: center;
     }
 }
 
@@ -310,6 +327,11 @@ li.nav-item.dropdown {
 
     .bottom-bd img {
         margin: 0;
+    }
+
+    .bottom-bd.first {
+        margin-top: 0;
+        box-shadow: 0 0px 8px 0px black;
     }
 }
 
@@ -353,6 +375,8 @@ li.nav-item.dropdown {
     .bottom-bd.first {
         justify-content: flex-start;
         padding-right: 0;
+        box-shadow: none;
+        padding-top: 0;
     }
 }
 
