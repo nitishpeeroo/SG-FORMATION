@@ -189,7 +189,7 @@ a.text-dark:hover {
 
 .bottom-bd {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -254,6 +254,50 @@ li.nav-item.dropdown {
     display: none;
 }
 
+
+#left-menu .right-arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    margin-left: 10px;
+    bottom: auto;
+    left: auto;
+    right: 10px;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent black;
+    background: transparent;
+    border-radius: 0;
+    width: 0;
+    height: 0;
+    border-width: 5px;
+    overflow: hidden;
+    font: bold 16px/34px monospace !important;
+    text-align: center;
+    text-shadow: none;
+}
+
+#left-menu a.nav-link {
+    text-align: left;
+    padding: 0 28px 0px 15px;
+}
+
+#left-menu li.nav-item.dropdown {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*width: 100%;*/
+}
+.bottom-bd.first {
+    justify-content: flex-start;
+    padding-right: 0;
+}
+
+.left-clearfix {
+    display: block;
+    content: "";
+    clear: both;
+    float: left;
+    width: 100%;
+}
 
 @media (max-width: 1280px) {
     .bd-title {
