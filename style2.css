@@ -193,6 +193,7 @@ a.text-dark:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    max-height: calc(100vh - 106px);
 }
 
 .bottom-bd a {
@@ -393,4 +394,280 @@ li.nav-item.dropdown {
 }
 #break{
 margin-top:24px!important;
+}
+
+
+
+
+/**
+ * search icon
+ */
+
+@font-face {
+    font-family: 'search-icon';
+    src: url('font/search-icon.eot?44929239');
+    src: url('font/search-icon.eot?44929239#iefix') format('embedded-opentype'),
+    url('font/search-icon.woff2?44929239') format('woff2'),
+    url('font/search-icon.woff?44929239') format('woff'),
+    url('font/search-icon.ttf?44929239') format('truetype'),
+    url('font/search-icon.svg?44929239#search-icon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'search-icon';
+    src: url('../font/search-icon.svg?44929239#search-icon') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "search-icon";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-search:before {
+    content: '\e800';
+    color: black;
+    font-size: 120%;
+} /* '' */
+
+.icon-search:hover:before {
+    color: #007bff;
+}
+
+#search_mod {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.8);
+    z-index: 1000;
+    transition: 450ms;
+}
+#search_mod.opened {
+    left: 0%;
+    transition: 450ms;
+}
+
+#search_mod .icon-search:before {
+    color: white;
+}
+
+.search_mod-container {
+    position: relative;
+    width: calc(100% - 30px);
+    max-width: 500px;
+}
+
+.search_mod-input {
+    padding-right: 60px;
+}
+
+.search_mod-send {
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+    background-color: #2a3c7a;
+    border-color: #2a3c7a;
+}
+
+.search_mod-close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font-size: 50px;
+    line-height: 20px;
+    padding: 18px 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.search_mod-close:hover {
+    color: #2a3c7a;
+}
+
+/**
+ * Search page
+ */
+
+.searchp-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.searchp-item {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.searchp-item a {
+    text-decoration: none;
+}
+
+.searchp-name {
+    margin-bottom: 5px;
+    font-weight: 900;
+}
+
+.searchp-niveau,
+.searchp-temps {
+    font-weight: 100;
+}
+
+/**
+ * Fiche
+ */
+
+#fiche-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.fiche-ttitle,
+.fiche-btitle {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 24px;
+    color: #2a3c7a;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.fiche-niveau {
+    text-align: right;
+    color: #0076ba;
+    margin-top: 15px;
+}
+.niveau-n {
+    opacity: 0.5;
+}
+
+
+.fiche-parametre {
+    display: flex;
+    margin-bottom: 20px;
+}
+.fiche-parametre:nth-child(even) {
+    text-align: left;
+    justify-content: flex-start;
+}
+.fiche-parametre:nth-child(odd) {
+    text-align: left;
+    justify-content: flex-end;
+}
+.fiche-parametre-img {
+
+}
+.fiche-parametre-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 15px;
+}
+.fiche-parametre-text .title {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #2d89b4;
+    letter-spacing: -0.8px;
+}
+.fiche-parametre-text .param {
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #2a3c7a;
+    letter-spacing: -0.8px;
+}
+
+.fiche-separator {
+    border-top: 2px solid #2d89b4;
+}
+
+.fiche-description {
+    text-align: left;
+    background: #f0f4f8;
+    margin-top: 20px;
+}
+
+.fiche-description div {
+    margin-top: 1rem;
+    color: #2d89b4;
+    font-weight: 700;
+}
+
+.fiche-description p {
+    font-weight: 500;
+}
+
+.fiche-image {
+    margin-top: 50px;
+}
+
+.fiche-image img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.fiche-image iframe {
+    width: 100% !important;
+    max-width: 560px;
+}
+
+.fiche-btitle {
+    margin-top: 50px;
+    position: relative;
+}
+.fiche-btitle:before {
+    content: " ";
+    background: #2a3c7a;
+    position: absolute;
+    left: 0px;
+    width: 4px;
+    height: calc(100% + 30px);
+}
+
+@media (max-width: 768px) {
+    .fiche-parametre:nth-child(odd),
+    .fiche-parametre:nth-child(even){
+        justify-content: flex-start;
+    }
 }
