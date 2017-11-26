@@ -9,7 +9,9 @@
 /* Carets in collapsible mode (make them look like +/- buttons) */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-
+.navbar-toggler {
+    cursor: pointer;
+}
 .navbar-nav.sm-collapsible .sub-arrow {
     position: absolute;
     top: 50%;
@@ -664,6 +666,106 @@ margin-top:24px!important;
     width: 4px;
     height: calc(100% + 30px);
 }
+
+
+/**
+ * comments
+ */
+
+.fiche-comments {
+    margin-top: 70px;
+    text-align: left;
+}
+
+.fiche_comments-posted {
+
+}
+
+.fiche_comments-add {
+    margin-top: 20px;
+}
+.fiche-comments-title {
+    margin-bottom: 20px;
+}
+.fiche_comments-posted-item {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+.fiche_comments-posted-item hr {
+    border-color: #2a3c7a;
+}
+.fiche_comments-posted-author {
+    font-weight: 900;
+    color: #2a3c7a;
+}
+.fiche_comments-posted-message {
+    padding-left: 10px;
+    margin-top: 10px;
+}
+.fiche_comments-posted-rating {
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.fiche_comments-posted-rating span {
+    color: #2a3c7a;
+    font-weight: 900;
+    word-spacing: -4px;
+}
+
+.fiche_comments-add input,
+.fiche_comments-add textarea {
+    width: 100%;
+}
+.fiche_comments-add legend {
+    margin-bottom: 20px;
+}
+
+.fiche_comments-add button {
+    background: #2a3c7a;
+    border-color: #2a3c7a;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**
+ * Evaluation
+ */
+.rating {
+    border: none;
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+}
+
+.rating > input { display: none; }
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    display: inline-block;
+    content: "★";
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label, /* show gold star when clicked */
+.rating:not(:checked) > label:hover, /* hover current star */
+.rating:not(:checked) > label:hover ~ label { color: #2a3c7a;  } /* hover previous stars in list */
+
+.rating > input:checked + label:hover, /* hover current star when changing rating */
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.rating > input:checked ~ label:hover ~ label { color: #2d89b4;  }
+
+
+
+
 
 @media (max-width: 768px) {
     .fiche-parametre:nth-child(odd),

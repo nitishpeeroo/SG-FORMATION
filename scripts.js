@@ -8,3 +8,10 @@ $("#search_mod-menu").click(function () {
 $(".search_mod-close").click(function () {
     $("#search_mod").removeClass("opened");
 });
+
+
+
+
+
+
+
