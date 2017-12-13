@@ -145,7 +145,7 @@ body {
     background: white;
     font-weight: 700;
     color: #333333;
-    box-shadow: 0 -2px 14px 0px black;
+    box-shadow: 0 -5px 10px 0px black;
 }
 
 a,
@@ -339,7 +339,7 @@ li.nav-item.dropdown {
 
     .bottom-bd.first {
         margin-top: 0;
-        box-shadow: 0 0px 8px 0px black;
+        box-shadow: 0 0px 2px 0px #c3c3c3;
     }
 }
 
@@ -657,6 +657,7 @@ margin-top:24px!important;
 .fiche-btitle {
     margin-top: 50px;
     position: relative;
+    font-size: 18px;
 }
 .fiche-btitle:before {
     content: " ";
@@ -664,7 +665,11 @@ margin-top:24px!important;
     position: absolute;
     left: 0px;
     width: 4px;
-    height: calc(100% + 30px);
+    height: calc(100% + 20px);
+}
+
+.fiche .bottom-bd a {
+    margin: 0 auto;
 }
 
 
@@ -673,7 +678,7 @@ margin-top:24px!important;
  */
 
 .fiche-comments {
-    margin-top: 70px;
+    margin-top: 60px;
     text-align: left;
 }
 
